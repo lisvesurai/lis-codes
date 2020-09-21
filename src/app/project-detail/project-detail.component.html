@@ -1,0 +1,41 @@
+<section *ngIf="project">
+    <a routerLink="/portfolio" class="close-button"><i class="close-icon"></i></a>
+    <article>
+        <h2>{{project.name}}</h2>
+
+        <dl *ngIf="project.company">
+            <dt>Company</dt>
+            <dd>{{project.company}}</dd>
+        </dl>
+
+        <dl *ngIf="project.client">
+            <dt>Client</dt>
+            <dd>{{project.client}}</dd>
+        </dl>
+
+        <dl *ngIf="project.date">
+            <dt>Date</dt>
+            <dd>{{project.date}}</dd>
+        </dl>
+
+        <div *ngIf="project.skills" class="tags">
+            <span *ngFor="let skill of project.skills">{{skill}}</span>
+        </div>
+
+        <p *ngIf="project.description">{{project.description}}</p>
+
+        <div class="actions" *ngIf="project.production_url || project.demo_url || project.prototype_url || project.github_url">
+            <a href="{{project.production_url}}" class="button" target="_blank" *ngIf="project.production_url">View Application</a>
+
+            <a href="{{project.demo_url}}" class="button" target="_blank" *ngIf="project.demo_url">View Demos</a>
+
+            <a href="{{project.prototype_url}}" class="button" target="_blank" *ngIf="project.prototype_url">View Prototype</a>
+
+            <a href="{{project.github_url}}" class="button" target="_blank" *ngIf="project.github_url">View Source</a>
+        </div>
+
+        <div *ngIf="project.large_sshots" class="screenshots"><img src="/assets/screenshots/{{sshot}}" *ngFor="let sshot of project.large_sshots" /></div>
+
+        <a routerLink="/portfolio" class="button">Close</a>
+    </article>
+</section>

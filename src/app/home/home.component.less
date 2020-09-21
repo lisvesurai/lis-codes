@@ -1,0 +1,63 @@
+@import url('../../less/_common.less');
+
+.logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200vw;
+    height: 200vw;
+    background: @color-primary;
+    clip-path: polygon(42% 0%, 88% 20%, 98% 54%, 54% 94%, 0% 69%, 19% 9%);
+    opacity: .2;
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+    transform: rotate(-125deg) translateX(20%) translateY(20%);
+
+    .lv {
+        font-family: 'Yesteryear', cursive;
+        font-size: 28vw;
+        color: white;
+        position: absolute;
+        top: 12%;
+        left: 15%;
+        opacity: .5;
+        transform: scale(.5, .5);
+    }
+
+    &.animate {
+        width: 40vw;
+        height: 40vw;
+        opacity: 1;
+        transform: rotate(0deg) translateX(10%) translateY(15%);
+        transition: all 2s ease-out;
+
+        .lv {
+            opacity: 1;
+            transform: scale(1, 1);
+            transition: all 2s ease-in 1s;
+            cursor: default;
+
+            & > span {
+                position: absolute;
+                top: 15%;
+                left: 75%;
+            }        
+        }
+    }
+}
+
+@media screen and @mq-portrait {
+    .logo {
+        transform: rotate(-195deg) translateX(20%) translateY(20%);
+
+        .lv {
+            font-size: 28vh;
+        }
+
+        &.animate {
+            width: 40vh;
+            height: 40vh;
+        }
+    }
+}

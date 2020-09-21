@@ -1,0 +1,84 @@
+@import url('../../less/_common.less');
+
+section {
+    background: url('/assets/photo.jpg');
+    background-size: cover;
+    background-position: right -5rem top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    opacity: 0;
+
+    &.fade-in {
+        opacity: 1;
+        transition: opacity 1s ease-in;
+    }
+
+    article {
+        padding: 50vh 2rem 2rem;
+        width: 100vw;
+        height: 100vh;
+        overflow-y: auto;
+
+        p {
+            font-family: 'Caveat', sans-serif;
+            font-size: 1.9rem;
+            color: @color-gray-xx-light;
+            text-shadow: 0 0 .5rem @color-black;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: @color-gray-dark-transparent;
+            border-radius: .5rem;
+
+            a {
+                color: @color-gray-xx-light;
+
+                &:hover {
+                    color: @color-primary;
+                }
+            }
+        }
+    }
+}
+
+@media @mq-landscape {
+    section {
+        background-position: right top;
+    }
+}
+
+@media @mq-landscape and @mq-medium {
+    section {
+        article {
+            position: fixed;
+            bottom: -100vh;
+            padding: 30vh 2rem 2rem;
+            overflow-y: unset;
+
+            p {
+                max-width: 50vw;
+                font-size: 2.5vw;
+                margin-bottom: 3rem;
+                padding: 0;
+                background: transparent;
+            }
+        }
+
+        &.fade-in {
+            article {
+                bottom: 0;
+                transition: bottom 2s ease-in .3s;
+            }
+        }
+    }
+}
+
+@media @mq-portrait and @mq-small {
+    section {
+        article {
+            p {
+                font-size: 5vw;
+            }
+        }
+    }
+}

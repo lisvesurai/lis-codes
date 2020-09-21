@@ -1,0 +1,30 @@
+<main [ngClass]="{'stop-animation': isResizing }">
+    <router-outlet></router-outlet>
+
+    <nav [ngClass]="getRoute()">
+        <div class="collapsible" [ngClass]="{'open': menuOpened }">
+            <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">
+                <span class="large">About</span>
+                <span class="small">Me</span>
+            </a>
+            <a routerLink="/portfolio" routerLinkActive="active" (click)="closeMenu()">
+                <span class="small">My</span>
+                <span class="large">Portfolio</span>
+            </a>
+            <a href="/assets/Lis_Vesurai_Resume.pdf" target="_blank" (click)="closeMenu()">
+                <span class="large">Resume</span>
+                <span class="small">Download</span>
+            </a>
+        </div>
+        <a class="toggle-button" (click)="toggleMenu()" [ngClass]="{'close': menuOpened }"><i class="toggle-icon"></i></a>
+    </nav>
+
+    <a routerLink="/home" routerLinkActive="active" class="logo"><span class="icon-lv-logo"></span></a>
+
+    <footer [ngClass]="getRoute()">
+        <small>&copy; 2020</small>
+        <a href="mailto:lisvesurai@gmail.com">Contact Me</a>
+        <a href="https://www.linkedin.com/in/lisvesurai/" target="_blank"><span class="icon-linkedin"></span></a>
+        <a href="https://github.com/lisvesurai" target="_blank"><span class="icon-github"></span></a>
+    </footer>
+</main>
