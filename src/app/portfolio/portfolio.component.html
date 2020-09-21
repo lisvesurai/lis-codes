@@ -3,8 +3,10 @@
         <li *ngFor="let project of portfolio">
             <a routerLink="/detail/{{project.id}}" *ngIf="project.description">
             	<img src="/assets/screenshots/{{project.small_sshot}}" alt="{{project.name}} Screenshot" />
-                <!--<span class="project_name">{{project.name}}</span>
-                <span class="project_date">{{project.date}}</span>-->
+                <summary>
+                    <span class="project_name">{{project.name}}</span>
+                    <span class="project_date">{{project.date}}</span>
+                </summary>
             </a>
             <a href="{{project.prototype_url}}" target="_blank" *ngIf="!project.description">
             	<span class="project_name">{{project.name}}</span>

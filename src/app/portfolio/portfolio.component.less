@@ -25,14 +25,33 @@ ul {
             text-decoration: none;
             box-shadow: .125rem .25rem 1rem @color-gray-x-light;
             transition: all .3s ease;
+            position: relative;
+
+            summary {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: @color-primary-dark;
+                color: #fff;
+                opacity: 0;
+                transition: all 1s ease;
+            }
 
             &:hover {
                 background: @color-primary-dark;
                 color: #fff;
                 transition: all .3s ease;
+
+                summary {
+                    opacity: 1;
+                    transition: all 1s ease;
+                }
             }
 
             span {
+                display: block;
+
                 &:first-child {
                     font-family: 'Staatliches', sans-serif;
                     letter-spacing: .1rem;
