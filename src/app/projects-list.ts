@@ -36,6 +36,21 @@ export const PROJECTS: Project[] = [
       "large_sshots":["netskope_plugin.png","netskope_plugin_2.png", "netskope_plugin_3.png"]
    },
    {
+      "id":102,
+      "name":"Netskope Security Check",
+      "company":"Netskope",
+      "date":"2020",
+      "skills":[
+         "HTML",
+         "CSS",
+         "Photoshop"
+      ],
+      "production_url": "https://netskopesecuritycheck.com/",
+      "description":"Netskope Security Check is an analytic tool designed to diagnose your network security. I worked with another developer on this project who chose to use React on the project. My involvement was desiging the UI and code HTML/CSS.",
+      "small_sshot":"netskopesecuritycheck_small.png",
+      "large_sshots":["netskopesecuritycheck_large.png"]
+   },
+   {
       "id":2,
       "name":"List App - Mobile Site - Code Challenge",
       "date":"November 2015",
