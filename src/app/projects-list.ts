@@ -340,5 +340,36 @@ export const PROJECTS: Project[] = [
       "name":"Virgin Mobile WAP Touch Mockup",
       "date":"2009",
       "prototype_url":"/prototypes/virgin_wap_v2/"
+   },
+   {
+      "id":2000,
+      "name":"Loft Bed 3D and Build",
+      "skills":[
+         "SketchUp"
+      ],
+      "description":"I built this loft bed for my teenage son. I first drew it on SketchUp. Had the lumber yard cut all the wood to size and I just screw/bolt them together.",
+      "small_sshot":"loft_bed_3d_small.jpg",
+      "large_sshots":["loft_bed_3d.jpg", "loft_bed_3d_2.jpg", "loft_bed.jpg", "loft_bed_2.jpg"]
+   },
+   {
+      "id":2001,
+      "name":"Guinea Pig Cage 3D and Build",
+      "skills":[
+         "SketchUp"
+      ],
+      "description":"I built this cage for my guinea pigs. I first drew it on SketchUp. Had the lumber yard cut all the wood to size and I just screw/bolt them together. Got scrap pieces of plexiglass from a plastic store, also had them cut to size.",
+      "small_sshot":"guinea_pig_cage_3d_small.jpg",
+      "large_sshots":["guinea_pig_cage_3d.jpg", "guinea_pig_cage.jpg", "guinea_pig_cage_2.jpg", "guinea_pig_cage_3.jpg", "guinea_pig_cage_4.jpg"]
+   },
+   {
+      "id":2002,
+      "name":"Camper Van 3D",
+      "skills":[
+         "SketchUp"
+      ],
+      "description":"Interior of a camper van I dream of building some day.",
+      "small_sshot":"camper_van_3d_small.jpg",
+      "large_sshots":["camper_van_3d.jpg", "camper_van_3d_2.jpg", "camper_van_3d_3.jpg", "camper_van_3d_4.jpg", "camper_van_3d_5.jpg"]
    }
+
 ];

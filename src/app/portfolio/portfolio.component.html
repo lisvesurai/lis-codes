@@ -1,6 +1,6 @@
 <section>
     <ul>
-        <li *ngFor="let project of portfolio">
+        <li *ngFor="let project of portfolio" id="{{project.id}}">
             <a routerLink="/detail/{{project.id}}" *ngIf="project.description">
             	<img src="/assets/screenshots/{{project.small_sshot}}" alt="{{project.name}} Screenshot" />
                 <summary>
